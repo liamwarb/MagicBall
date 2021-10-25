@@ -1,106 +1,43 @@
+import java.util.HashMap;
 import java.util.Random;
 
 public class MagicBall {
 
-    private static final int MAX_VALUE = 19;
+    private static final int MAX_VALUE = 20;
     private static final int MIN_VALUE = 1;
 
     private int generateRandomNumber() {
-        Random rand = new Random();
-        return rand.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE;
+        Random random = new Random();
+        return random.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE;
     }
 
     public String predictTheFuture() {
 
-        int choice = generateRandomNumber();
+        HashMap <Integer, String> result = new HashMap <>();
 
-        if (choice == 1) {
+        result.put(1, "It is certain.");
+        result.put(2, "It is decidedly so.");
+        result.put(3, "Without a doubt.");
+        result.put(4, "Yes - definitely.");
+        result.put(5, "You may rely on it.");
+        result.put(6, "As I see it, yes.");
+        result.put(7, "Most likely.");
+        result.put(8, "Outlook good.");
+        result.put(9, "Yes.");
+        result.put(10, "Signs point to yes.");
+        result.put(11, "Reply hazy, try again.");
+        result.put(12, "Ask again later.");
+        result.put(13, "Better not tell you now.");
+        result.put(14, "Cannot predict now.");
+        result.put(15, "Concentrate and ask again.");
+        result.put(16, "Don't count on it.");
+        result.put(17, "My reply is no.");
+        result.put(18, "My sources say no.");
+        result.put(19, "Outlook not so good.");
+        result.put(20, "Very doubtful.");
 
-            System.out.println("It is certain.");
-
-        } else if (choice == 2) {
-
-            System.out.println("It is decidedly so.");
-
-        } else if (choice == 3) {
-
-            System.out.println("Without a doubt.");
-
-        } else if (choice == 4) {
-
-            System.out.println("Yes - definitely.");
-
-        } else if (choice == 5) {
-
-            System.out.println("You may rely on it.");
-
-        } else if (choice == 6) {
-
-            System.out.println("As I see it, yes.");
-
-        } else if (choice == 7) {
-
-            System.out.println("Most likely.");
-
-        } else if (choice == 8) {
-
-            System.out.println("Outlook good.");
-
-        } else if (choice == 9) {
-
-            System.out.println("Yes.");
-
-        } else if (choice == 10) {
-
-            System.out.println("Signs point to yes.");
-
-        } else if (choice == 11) {
-
-            System.out.println("Reply hazy, try again.");
-
-        } else if (choice == 12) {
-
-            System.out.println("Ask again later.");
-
-        } else if (choice == 13) {
-
-            System.out.println("Better not tell you now.");
-
-        } else if (choice == 14) {
-
-            System.out.println("Cannot predict now.");
-
-        } else if (choice == 15) {
-
-            System.out.println("Concentrate and ask again.");
-
-        } else if (choice == 16) {
-
-            System.out.println("Don't count on it.");
-
-        } else if (choice == 17) {
-
-            System.out.println("My reply is no.");
-
-        } else if (choice == 18) {
-
-            System.out.println("My sources say no.");
-
-        } else if (choice == 19) {
-
-            System.out.println("Outlook not so good.");
-
-        } else {
-
-            System.out.println("Very doubtful.");
-
-        }
-        return "banana";
-
+        return result.get(generateRandomNumber());
     }
-
-    // 1. Remove system.out.println apart from line 107 and 112
-    // 2. Better way of doing if, else-if, else-if, else-if.  Hint, use a hashmap
 
     public static void main(String[] args) {
 
