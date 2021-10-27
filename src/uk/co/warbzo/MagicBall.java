@@ -36,7 +36,7 @@ public class MagicBall {
         result.put(17, "My reply is no.");
         result.put(18, "My sources say no.");
         result.put(19, "Outlook not so good.");
-        result.put(21, "Very doubtful.");
+        result.put(20, "Very doubtful.");
 
         return result.get(generateRandomNumber());
     }
