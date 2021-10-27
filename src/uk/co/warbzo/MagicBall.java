@@ -1,3 +1,5 @@
+package uk.co.warbzo;
+
 import java.util.HashMap;
 import java.util.Random;
 
